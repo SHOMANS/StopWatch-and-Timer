@@ -114,6 +114,7 @@ function timer() {
         seconds--;
       }
       minutesEliment.textContent = minutes + "m";
+      seconds < 10 ? (seconds = `0${seconds}`) : seconds;
       secondsElimet.textContent = seconds + "s";
     }, 1000);
   }
@@ -127,4 +128,22 @@ function stopTime() {
 
 staTimer.addEventListener("click", timer);
 stoTimer.addEventListener("click", stopTime);
-// // End Timer
+// End Timer
+
+//  Start Tabing
+
+const tabs = document.querySelectorAll("main nav ul li");
+const content = document.querySelectorAll(".content");
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", function () {
+    tabs.forEach((tab) => tab.classList.remove("active"));
+    tab.classList.add("active");
+    content.forEach((cont) => {
+      cont.classList.remove("active");
+    });
+    content[index].classList.add("active");
+  });
+});
+
+// End Tabing
