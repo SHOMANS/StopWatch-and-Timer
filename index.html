@@ -12,11 +12,11 @@
       <div class="container">
         <nav>
           <ul>
-            <li class="active">Stop Watch</li>
-            <li>Timer</li>
+            <li class="active" data-tabs="stopWatch">Stop Watch</li>
+            <li data-tabs="timer">Timer</li>
           </ul>
         </nav>
-        <div id="stopWatch" class="active">
+        <div id="stopWatch" class="content active">
           <h2>Stop Watch</h2>
           <div class="time">
             <h2 id="sec">00s</h2>
@@ -29,8 +29,8 @@
           </div>
         </div>
 
-        <div>
-          <div id="timer">
+        <div id="timer" class="content">
+          <div>
             <h2>Timer</h2>
             <label for="minutes">Write minutes</label>
             <input id="minutes" type="number" value="5" />
